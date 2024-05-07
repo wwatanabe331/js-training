@@ -5,13 +5,13 @@ import instruction from "./instruction.md";
 
 const convertData = (input) => {
   //return []; // ここを作りましょう！
-  const species = Array.from(new Set(input.map(({species}) =>species)));
+  const species = Array.from(new Set(input.map(({ species }) => species)));
   return species.map((species) => {
     return {
       id: species,
       data: input
-      .filter((item) => item.species === species)
-      .map(({spalLength: x, petalWidth: y}) => ({x, y})),
+        .filter((item) => item.species === species)
+        .map(({ sepalLength: x, petalWidth: y }) => ({ x, y })),
     };
   });
 
