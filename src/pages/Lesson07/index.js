@@ -6,11 +6,8 @@ import instruction from "./instruction.md";
 const convertData = (input) => {
   //return []; // ここを作りましょう！
   for(const item of input) {
-    // 日付をUTCとして解釈
     const d = new Date(`${item.createAt} UTC`);
-    //getFullYear()は年（４桁）の値を取得する
     const year = d.getFullYear();
-    // 月（2桁に変換）
     const month = `${d.getMonth() + 1}`.padStart(2, "0");
     const date = `${d.getDate()}`.padStart(2, "0");
     item.createdAt = `${year} - ${month} - ${date}`;
