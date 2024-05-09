@@ -6,6 +6,7 @@ import instruction from "./instruction.md";
 const convertData = (input) => {
   //return []; // ここを作りましょう！
   const genders = Array.from(new Set(input.map(({ gender }) => gender)));
+  //Math.minは引数yが
   const min = Math.round(Math.min(...input.map(({ y }) => y)));
   const max = Math.round(Math.max(...input.map(({ y }) => y)));
   const bins = Array.from({ length: max - min + 1 }).map((_, i) => {

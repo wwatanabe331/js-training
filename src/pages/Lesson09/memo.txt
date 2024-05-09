@@ -1,0 +1,16 @@
+⭐️.forEach
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach((number) => {
+  console.log(number);
+});
+
+
+⭐️Object.entries
+const obj = {
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3'
+};
+Object.entries(obj).forEach(([key, value]) => {
+  console.log(`キー: ${key}, 値: ${value}`);
+});

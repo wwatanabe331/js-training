@@ -5,11 +5,24 @@ import instruction from "./instruction.md";
 
 const convertData = (input) => {
   //return []; // ここを作りましょう！
-  return input.filter(item => item.gender === "男性");
+  return input.filter(({gender}) =>gender === "男性");
+  //同じ：return input.filter(item => item.gender === "男性");
+  //オブジェクトはプロパティの名前で取り出す({gender})
+
+  //return user.id;
+  // return input.filter((gender) =>{
+  //   // const{gender} = item;
+  //   return gender === "男性"
+  // });
   
-  //×var str = "男性";
-  //return (input.gender == str)
-  //×return "gender" === "男性";
+  
+  //return input.map(([name, count]) =>({name, count}));
+  {/*const convertedData = input.map((v) => ({ name: v.name, count: v.count}));
+return convertedData*/}
+  // const{gender} = item;
+
+  //×const str = "男性";
+  //return (input.gender == str);
 };
 
 const Lesson = () => {

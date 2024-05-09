@@ -4,7 +4,11 @@ import Chart from "../../components/Chart01";
 import instruction from "./instruction.md";
 
 const convertData = (input) => {
-  return input.map(([name, count]) => ({name, count}));
+  //return input.map(([name, count]) =>({name, count}));
+
+  const convertedData = input.map((v) => ({ name: v.name, count: v.count}));
+  return convertedData
+
 };
 
 const Lesson = () => {
